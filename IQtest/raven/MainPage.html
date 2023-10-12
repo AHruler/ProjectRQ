@@ -1,0 +1,16 @@
+{{ block content }}
+
+    <p>How much would you pay for the following product?</p>
+    <h5 class="card-title">{{ matrix.img_name }}</h5>
+    <img src="{{ static matrix.image_path }}" style="width: 556px">
+
+    {{ formfields }}
+    {{ next_button }}
+
+    <script>
+        // this part is optional. it automatically puts the cursor in the text box,
+        // so that the user doesn't need to click on it.
+        document.getElementsByName('difficulty')[0].focus();
+    </script>
+
+{{ endblock }}
